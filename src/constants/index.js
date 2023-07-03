@@ -16,6 +16,7 @@ import {
   figma,
   docker,
   meta,
+  skif,
   starbucks,
   caterpillar,
   tesla,
@@ -119,8 +120,8 @@ const experiences = [
   {
     title: "UI/UX Research",
     company_name: "Caterpillar",
-    icon: starbucks,
-    iconBg: "#383E56",
+    icon: caterpillar,
+    iconBg: "black",
     date: "March 2023 - Present",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
@@ -132,7 +133,7 @@ const experiences = [
   {
     title: "System Administrator",
     company_name: "Skif-DV",
-    icon: tesla,
+    icon: skif,
     iconBg: "#E6DEDD",
     date: "Jan 2021 - Feb 2022",
     points: [
