@@ -4,9 +4,11 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
 
+
 const Computers = ({ isMobile }) => {
   const computer = useGLTF("./desktop_pc/3D.glb");
 
+  
   return (
     <mesh>
       <hemisphereLight intensity={0.15} groundColor='black' />
@@ -21,7 +23,7 @@ const Computers = ({ isMobile }) => {
       <pointLight intensity={0} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 4 : 4.75}
+        scale={isMobile ? 3 : 4.75}
         position={isMobile ? [0, -2, -1] : [0, -4.5, -1]}
         rotation={[0, 1.2, 0]}
       />
@@ -52,6 +54,16 @@ const ComputersCanvas = () => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
     };
   }, []);
+  
+  const [autoRotateSpeed, setAutoRotateSpeed] = useState(5);
+
+  const handleAngleChange = (angle) => {
+    if (angle > 0 & autoRotateSpeed === 5) {
+      setAutoRotateSpeed(-5);
+    } else if (angle < -3 & autoRotateSpeed === -5) {
+      setAutoRotateSpeed(5);
+    }
+  };
 
   return (
     <Canvas
@@ -64,13 +76,14 @@ const ComputersCanvas = () => {
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
           enableZoom={false}
-          autoRotate ={true}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
+          autoRotate = {true}
+          autoRotateSpeed={autoRotateSpeed}
+          onChange={(event) => handleAngleChange(event.target.getAzimuthalAngle())}
         />
         <Computers isMobile={isMobile} />
       </Suspense>
-
       <Preload all />
     </Canvas>
   );
