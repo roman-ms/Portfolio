@@ -29,7 +29,7 @@ const Navbar = () => {
     <nav
       className={`${
         styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-20 ${
+      } w-full flex items-center py-5 fixed top-2 z-20 ${
         scrolled ? "bg-transparent" : "bg-transparent"
       }`}
     >
@@ -42,10 +42,11 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
+
           <p className='text-white text-[18px] font-bold cursor-pointer flex '>
-            Roman &nbsp;
+            Roma &nbsp;
             <span className='sm:block hidden'> | Portfolio Website</span>
+            
           </p>
         </Link>
 

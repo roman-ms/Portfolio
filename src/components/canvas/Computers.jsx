@@ -16,15 +16,15 @@ const Computers = ({ isMobile }) => {
         position={[30, 60, 10]}
         angle={0.12}
         penumbra={1}
-        intensity={1}
+        intensity={0.5}
         castShadow
         shadow-mapSize={1024}
       />
       <pointLight intensity={0} />
       <primitive
         object={computer.scene}
-        scale={isMobile ? 3 : 4.75}
-        position={isMobile ? [0, -2, -1] : [0, -4.5, -1]}
+        scale={isMobile ? 3 : 4}
+        position={isMobile ? [0, -2, -1] : [0, -4, -1]}
         rotation={[0, 1.2, 0]}
       />
     </mesh>
@@ -55,13 +55,13 @@ const ComputersCanvas = () => {
     };
   }, []);
   
-  const [autoRotateSpeed, setAutoRotateSpeed] = useState(5);
+  const [autoRotateSpeed, setAutoRotateSpeed] = useState(1);
 
   const handleAngleChange = (angle) => {
-    if (angle > 0 & autoRotateSpeed === 5) {
-      setAutoRotateSpeed(-5);
-    } else if (angle < -3 & autoRotateSpeed === -5) {
-      setAutoRotateSpeed(5);
+    if (angle < 0.9) {
+      setAutoRotateSpeed(-1);
+    } else if (angle > 1.5) {
+      setAutoRotateSpeed(1);
     }
   };
 
