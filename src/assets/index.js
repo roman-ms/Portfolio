@@ -22,6 +22,7 @@ import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
 import caterpillar from "./company/caterpillar.png";
+import skif from "./company/skif.png";
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
@@ -56,6 +57,8 @@ export {
   meta,
   shopify,
   starbucks,
+  caterpillar,
+  skif,
   tesla,
   carrent,
   jobit,
