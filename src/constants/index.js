@@ -213,11 +213,11 @@ const projects = [
       "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
     tags: [
       {
-        name: "react",
+        name: "figma",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "mural",
         color: "green-text-gradient",
       },
       {
@@ -229,16 +229,16 @@ const projects = [
     source_code_link: "https://github.com/",
   },
   {
-    name: "Trip Guide",
+    name: "Todo App",
     description:
       "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
     tags: [
       {
-        name: "nextjs",
+        name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "Django",
         color: "green-text-gradient",
       },
       {
