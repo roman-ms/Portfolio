@@ -32,6 +32,8 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
+import instagram from "./tech/instagram.glb";
+
 export {
   logo,
   backend,
@@ -63,4 +65,5 @@ export {
   carrent,
   jobit,
   tripguide,
+  instagram,
 };
