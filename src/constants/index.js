@@ -25,7 +25,6 @@ import {
   jobit,
   tripguide,
   threejs,
-  instagram
 } from "../assets";
 
 export const navLinks = [
