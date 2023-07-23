@@ -25,6 +25,7 @@ import {
   jobit,
   tripguide,
   threejs,
+
 } from "../assets";
 
 export const navLinks = [
@@ -58,6 +59,33 @@ const services = [
   {
     title: "Content Creator",
     icon: creator,
+  },
+];
+
+const socials = [
+  {
+    name: "instagram",
+    model: "/Socials/Instagram.glb"
+  },
+  {
+    name: "Linkedin",
+    model: "/Socials/LinkedIn.glb"
+  },
+  {
+    name: "GitHub",
+    model: "/Socials/GitHub.glb"
+  },
+  {
+    name: "SoundCloud",
+    model: "/Socials/SoundCloud.glb"
+  },
+  {
+    name: "Twitter",
+    model: "/Socials/Twitter.glb"
+  },
+  {
+    name: "Youtube",
+    model: "/Socials/Youtube.glb"
   },
 ];
 
@@ -251,4 +279,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, testimonials, projects, socials};
