@@ -32,6 +32,11 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
+import Art from "./Art.png";
+import Programming from "./Programming.png";
+import Music from "./Music.png";
+import Learning from "./Learning.png";
+
 export {
   logo,
   backend,
@@ -63,4 +68,8 @@ export {
   carrent,
   jobit,
   tripguide,
+  Art,
+  Music,
+  Programming,
+  Learning
 };

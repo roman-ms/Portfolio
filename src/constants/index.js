@@ -25,7 +25,10 @@ import {
   jobit,
   tripguide,
   threejs,
-
+  Art,
+  Music,
+  Programming,
+  Learning
 } from "../assets";
 
 export const navLinks = [
@@ -45,48 +48,54 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
-    icon: web,
+    title: "Artist",
+    icon: Art,
   },
   {
-    title: "React Native Developer",
-    icon: mobile,
+    title: "Developer",
+    icon: Programming,
   },
   {
-    title: "Backend Developer",
-    icon: backend,
+    title: "Musician",
+    icon: Music,
   },
   {
-    title: "Content Creator",
-    icon: creator,
+    title: "Learner",
+    icon: Learning,
   },
 ];
 
 const socials = [
   {
     name: "instagram",
-    model: "/Socials/Instagram.glb"
+    model: "/Socials/Instagram.glb",
+    link: "https://www.instagram.com/familyfriendlyroma/"
   },
   {
     name: "Linkedin",
-    model: "/Socials/LinkedIn.glb"
+    model: "/Socials/LinkedIn.glb",
+    link: "https://www.linkedin.com/in/roman-meshkov/"
   },
   {
     name: "GitHub",
-    model: "/Socials/GitHub.glb"
+    model: "/Socials/GitHub.glb",
+    link: "https://github.com/roman-ms"
   },
   {
     name: "SoundCloud",
-    model: "/Socials/SoundCloud.glb"
+    model: "/Socials/SoundCloud.glb",
+    link: "https://soundcloud.com/romableepbloop"
   },
   {
     name: "Twitter",
-    model: "/Socials/Twitter.glb"
+    model: "/Socials/Twitter.glb",
+    link: ""
   },
   {
     name: "Youtube",
-    model: "/Socials/Youtube.glb"
-  },
+    model: "/Socials/Youtube.glb",
+    link: ""
+  }
 ];
 
 const technologies = [
@@ -170,20 +179,7 @@ const experiences = [
       "Implementing responsive design and ensuring cross-browser compatibility.",
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
+  }
 ];
 
 const testimonials = [
