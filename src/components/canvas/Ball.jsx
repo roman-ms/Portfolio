@@ -23,7 +23,7 @@ const Socials = ({ isMobile, icon }) => {
       <primitive
         object={social}
         scale={isMobile ? 2 : 4.75}
-        position={isMobile ? [0, 0, 0] : [0, -2, 4]}
+        position={isMobile ? [0, 0, 0] : [0, -3, 3]}
         rotation={[1.57, 0, -1.25]}
       />
     </mesh>
