@@ -9,7 +9,9 @@ const Tech = () => {
     <div className='flex flex-row flex-wrap justify-center gap-5'>
       {socials.map((technology) => (
         <div className='w-28 h-28' key={technology.name}>
-          <BallCanvas isMobile={true} icon={technology.model} />
+          <a href={technology.link} target="_blank" rel="noopener noreferrer">
+            <BallCanvas isMobile={true} icon={technology.model} />
+          </a>
         </div>
       ))}
     </div>
