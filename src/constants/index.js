@@ -60,7 +60,7 @@ const services = [
     icon: Music,
   },
   {
-    title: "Learner",
+    title: "Engineer",
     icon: Learning,
   },
 ];
