@@ -213,18 +213,18 @@ const projects = [
   {
     name: "Maitanance & Reliability",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Project aims to combine two largest Caterpillar web applications into one. Basing UI/UX decisions on ",
     tags: [
       {
-        name: "react",
+        name: "mural",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "figma",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "teams",
         color: "pink-text-gradient",
       },
     ],
@@ -237,15 +237,15 @@ const projects = [
       "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
     tags: [
       {
-        name: "figma",
+        name: "mural",
         color: "blue-text-gradient",
       },
       {
-        name: "mural",
+        name: "figma",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "teams",
         color: "pink-text-gradient",
       },
     ],
