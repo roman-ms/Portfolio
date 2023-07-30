@@ -22,8 +22,8 @@ const Socials = ({ isMobile, icon }) => {
       />
       <primitive
         object={social}
-        scale={isMobile ? 2 : 4.75}
-        position={isMobile ? [0, 0, 0] : [0, -3, 3]}
+        scale={isMobile ? 4 : 4.75}
+        position={isMobile ? [0, -2, 2.5] : [0, -3, 3]}
         rotation={[1.57, 0, -1.25]}
       />
     </mesh>
@@ -77,8 +77,7 @@ const BallCanvas = ({ icon }) => {
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
-          autoRotate = {true}
-          autoRotateSpeed={autoRotateSpeed}
+          autoRotate = {false}
           onChange={(event) => handleAngleChange(event.target.getAzimuthalAngle())}
         />
         <Socials isMobile={isMobile} icon={icon}/>
