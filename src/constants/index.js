@@ -161,10 +161,10 @@ const experiences = [
     iconBg: "black",
     date: "March 2023 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Conducting 50+ interviews with Caterpillar employees of different levels",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Wireframing applications based on companies needs and conducted research.",
+      "Presenting ideas and wireframes to targeted users and the board of stakeholders.",
     ],
   },
   {
@@ -174,10 +174,10 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "Jan 2021 - Feb 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Setting up and maintaining office equipment.",
+      "Implemented and managed a storage for documentation and data.",
+      "Maitaining local office server.",
+      "Participated in staff meetings and presented reports on the executed work.",
     ],
   }
 ];
@@ -213,7 +213,7 @@ const projects = [
   {
     name: "Maitanance & Reliability",
     description:
-      "Project aims to combine two largest Caterpillar web applications into one. Basing UI/UX decisions on ",
+      "Project aims to combine two largest Caterpillar web applications into one. Basing UI/UX decisions on over 50 interviews with employees, dealers and customers. Working through wireframes considering feedback from the second round of interviews and stackeholder meetings.",
     tags: [
       {
         name: "mural",
@@ -234,7 +234,7 @@ const projects = [
   {
     name: "CAT Energy",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Consulting project that helps Caterpillar identify solutions for green and reusable energy. Identifying persona in charge of emmissions tracking and suggesting CAT ideas on how to encourage customers to use green solutions.",
     tags: [
       {
         name: "mural",
