@@ -47,12 +47,13 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        I am a senior Computer Engineering major in UIC with passion for technology and art. During my college years 
-        I learned about electric curcuit desighn, signal processing and low level programming with Assembly and C. 
-        In addition, I have experience in languages such as Python, JavaScript, CSS, HTML and React 
-        framework which I used for my personal projects.On the art side of things I completed 4 years of art school. 
-        I am currently learning 3D modeling with Blender 
-        and doing a Google UI/UX course. 
+        I am a senior Computer Engineering major at UIC with passion for technology and art. 
+        During my college years, I learned Electric Circuit Design, Signal Processing, 
+        and low-level programming with Assembly and C. In addition, 
+        I have experience in languages such as Python, JavaScript, CSS, HTML, 
+        and the React framework, which I used for my personal projects. 
+        On the art side of things, I completed 4 years of art school.
+        Currently, I am learning 3D modeling with Blender and doing a Google UI/UX course.
       </motion.p>
 
       <div className='mt-20 flex flex-wrap justify-center gap-10'>

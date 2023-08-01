@@ -32,8 +32,7 @@ const ProjectCard = ({
             alt='project_image'
             className='w-full h-full object-cover rounded-2xl'
           />
-
-          {/*<div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
+          {source_code_link !== "none" ? (<div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
             <div
               onClick={() => window.open(source_code_link, "_blank")}
               className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
@@ -44,7 +43,7 @@ const ProjectCard = ({
                 className='w-1/2 h-1/2 object-contain'
               />
             </div>
-          </div>*/}
+          </div>) : null}
         </div>
 
         <div className='mt-5'>
@@ -80,9 +79,9 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
-          Following projects within UIC Innovation Center showcase my skills and experience through
+          The following projects showcase my skills and experience through
           real-world examples of my work. It reflects my ability to solve complex problems, 
-          utilise my technical and artistic abilities,
+          utilize my technical and design capabilities,
           and effectively manage projects.
         </motion.p>
       </div>

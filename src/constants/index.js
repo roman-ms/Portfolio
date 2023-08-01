@@ -56,7 +56,7 @@ const services = [
     icon: Programming,
   },
   {
-    title: "Musician",
+    title: "Designer",
     icon: Music,
   },
   {
@@ -89,12 +89,12 @@ const socials = [
   {
     name: "Twitter",
     model: "/Socials/Twitter.glb",
-    link: ""
+    link: "https://twitter.com/romasaysthings"
   },
   {
     name: "Youtube",
     model: "/Socials/Youtube.glb",
-    link: ""
+    link: "https://www.youtube.com/channel/UCG9qETvYIXbx4jU234gQaEQ"
   }
 ];
 
@@ -162,7 +162,7 @@ const experiences = [
     date: "March 2023 - Present",
     points: [
       "Conducting 50+ interviews with Caterpillar employees of different levels",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Collaborating with cross-functional team that includes designers, managers, and other developers to create high-quality products.",
       "Wireframing applications based on companies needs and conducted research.",
       "Presenting ideas and wireframes to targeted users and the board of stakeholders.",
     ],
@@ -176,7 +176,7 @@ const experiences = [
     points: [
       "Setting up and maintaining office equipment.",
       "Implemented and managed a storage for documentation and data.",
-      "Maitaining local office server.",
+      "Maintaining local office server.",
       "Participated in staff meetings and presented reports on the executed work.",
     ],
   }
@@ -213,7 +213,7 @@ const projects = [
   {
     name: "Maitanance & Reliability",
     description:
-      "Project aims to combine two largest Caterpillar web applications into one. Basing UI/UX decisions on over 50 interviews with employees, dealers and customers. Working through wireframes considering feedback from the second round of interviews and stackeholder meetings.",
+      "The project aims to combine the two largest Caterpillar web applications into one. Basing UI/UX decisions on over 50 interviews with employees, dealers, and customers. Working through wireframes considering feedback from the second round of interviews and stakeholders meetings.",
     tags: [
       {
         name: "mural",
@@ -229,12 +229,33 @@ const projects = [
       },
     ],
     image: carrent,
-    source_code_link: "https://github.com/",
+    source_code_link: "none",
+  },
+  {
+    name: "Todo App",
+    description:
+      "A simple ToDo application built with REST framework. Supports an SQL database for storing user login information and created to-do elements. The app also has an API that allows usability on different platforms.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "django",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: tripguide,
+    source_code_link: "https://github.com/roman-ms/todoapp",
   },
   {
     name: "CAT Energy",
     description:
-      "Consulting project that helps Caterpillar identify solutions for green and reusable energy. Identifying persona in charge of emmissions tracking and suggesting CAT ideas on how to encourage customers to use green solutions.",
+      "Consulting project that helps Caterpillar identify solutions for green and reusable energy. Identifying persona in charge of emissions tracking and suggesting CAT ideas on how to encourage customers to use green solutions.",
     tags: [
       {
         name: "mural",
@@ -250,29 +271,8 @@ const projects = [
       },
     ],
     image: jobit,
-    source_code_link: "https://github.com/",
+    source_code_link: "none",
   },
-  /*{
-    name: "Todo App",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Django",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
-  },*/
 ];
 
 export { services, technologies, experiences, testimonials, projects, socials};
