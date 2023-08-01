@@ -21,11 +21,8 @@ const Contact = () => {
   const handleChange = (e) => {
     const { target } = e;
     const { name, value } = target;
-
-    setForm({
-      ...form,
-      [name]: value,
-    });
+      
+    setForm({...form,[name]: value,});
   };
 
   const handleSubmit = (e) => {
@@ -34,8 +31,8 @@ const Contact = () => {
 
     emailjs
       .send(
+        'service_ktm1z79',
         'template_7vek809',
-        'service_riqlr1q',
         {
           from_name: form.name,
           to_name: "Roman",
@@ -43,7 +40,7 @@ const Contact = () => {
           to_email: "mshkv.roman@gmail.com",
           message: form.message,
         },
-        'Qhc1SUKp5ED7L60D2'
+        '2ILJPVDYhdMyHLplb'
       )
       .then(
         () => {
