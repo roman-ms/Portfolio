@@ -28,7 +28,8 @@ import {
   Art,
   Music,
   Programming,
-  Learning
+  Learning,
+  google
 } from "../assets";
 
 export const navLinks = [
@@ -165,6 +166,19 @@ const experiences = [
       "Collaborating with cross-functional team that includes designers, managers, and other developers to create high-quality products.",
       "Wireframing applications based on companies needs and conducted research.",
       "Presenting ideas and wireframes to targeted users and the board of stakeholders.",
+    ],
+  },
+  {
+    title: "Foundations of UX Design Certificate",
+    company_name: "Google",
+    icon: google,
+    iconBg: "white",
+    date: "August 2023",
+    points: [
+      "Learned fundamental principles of UI/UX such as Fitt's, Hick's and other laws of desighn",
+      "Gained understanding of various forms of user research and their pros/cons.",
+      "Utilised Figma toolset to build wireframes.",
+      "Completed certificate with 90% grade.",
     ],
   },
   {
