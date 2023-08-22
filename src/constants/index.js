@@ -192,7 +192,7 @@ const experiences = [
       "Implemented and managed a storage for documentation and data.",
       "Maintaining local office server.",
       "Participated in staff meetings and presented reports on the executed work.",
-    ],
+    ]
   }
 ];
 
