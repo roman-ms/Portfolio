@@ -29,7 +29,7 @@ import {
   Music,
   Programming,
   Learning,
-  google
+  google,
 } from "../assets";
 
 export const navLinks = [
@@ -43,13 +43,12 @@ export const navLinks = [
   },
   {
     id: "art",
-    title: "Art", 
+    title: "Art",
   },
   {
     id: "contact",
     title: "Contact",
-  }
-  
+  },
 ];
 
 const services = [
@@ -75,33 +74,33 @@ const socials = [
   {
     name: "instagram",
     model: "/Socials/Instagram.glb",
-    link: "https://www.instagram.com/familyfriendlyroma/"
+    link: "https://www.instagram.com/familyfriendlyroma/",
   },
   {
     name: "Linkedin",
     model: "/Socials/LinkedIn.glb",
-    link: "https://www.linkedin.com/in/roman-meshkov/"
+    link: "https://www.linkedin.com/in/roman-meshkov/",
   },
   {
     name: "GitHub",
     model: "/Socials/GitHub.glb",
-    link: "https://github.com/roman-ms"
+    link: "https://github.com/roman-ms",
   },
   {
     name: "SoundCloud",
     model: "/Socials/SoundCloud.glb",
-    link: "https://soundcloud.com/romableepbloop"
+    link: "https://soundcloud.com/romableepbloop",
   },
   {
     name: "Twitter",
     model: "/Socials/Twitter.glb",
-    link: "https://twitter.com/romasaysthings"
+    link: "https://twitter.com/romasaysthings",
   },
   {
     name: "Youtube",
     model: "/Socials/Youtube.glb",
-    link: "https://www.youtube.com/channel/UCG9qETvYIXbx4jU234gQaEQ"
-  }
+    link: "https://www.youtube.com/channel/UCG9qETvYIXbx4jU234gQaEQ",
+  },
 ];
 
 const technologies = [
@@ -197,8 +196,8 @@ const experiences = [
       "Implemented and managed a storage for documentation and data.",
       "Maintaining local office server.",
       "Participated in staff meetings and presented reports on the executed work.",
-    ]
-  }
+    ],
+  },
 ];
 
 const testimonials = [
@@ -294,4 +293,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects, socials};
+export { services, technologies, experiences, testimonials, projects, socials };

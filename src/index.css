@@ -46,11 +46,7 @@
 .red-gradient {
   background: red;
   background: linear-gradient(-90deg, red 0%, rgba(60, 51, 80, 0) 100%);
-  background: -webkit-linear-gradient(
-    -90deg,
-    red 0%,
-    rgba(60, 51, 80, 0) 100%
-  );
+  background: -webkit-linear-gradient(-90deg, red 0%, rgba(60, 51, 80, 0) 100%);
 }
 
 .green-pink-gradient {
