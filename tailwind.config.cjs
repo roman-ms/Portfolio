@@ -4,6 +4,11 @@ module.exports = {
   mode: "jit",
   theme: {
     extend: {
+      fontFamily: {
+        minimalist: ['"Fira Code"', "monospace"], // Add Fira Code
+        roboto: ["Roboto Mono", "monospace"], // Add Roboto Mono
+        space: ['"Space Grotesk"', "sans-serif"], // Add Space Grotesk
+      },
       colors: {
         primary: "#050816",
         secondary: "#aaa6c3",
