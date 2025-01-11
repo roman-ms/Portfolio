@@ -4,13 +4,24 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --body-bg-color: #920000; /* Define your body background color here */
+}
+
+body {
+  background-color: var(
+    --body-bg-color
+  ); /* Set your desired background color here */
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
-  color-scheme: dark;
 }
 
 .hash-span {

@@ -1,10 +1,11 @@
 import React, { Suspense, useEffect, useState } from "react";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useThree } from "@react-three/fiber";
 import {
   OrbitControls,
   Preload,
   useGLTF,
   MeshTransmissionMaterial,
+  Text,
 } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
@@ -23,8 +24,10 @@ const Computers = ({ isMobile }) => {
     backside: { value: true },
   });
 
+  const { viewport } = useThree();
+
   return (
-    <group rotation={[0, -Math.PI / 2, 0]}>
+    <group rotation={[0, -Math.PI / 2, 0]} scale={viewport.width * 2}>
       {/* Lighting */}
       <hemisphereLight intensity={0.15} groundColor="black" />
       <spotLight
@@ -36,7 +39,7 @@ const Computers = ({ isMobile }) => {
         shadow-mapSize={1024}
       />
       <pointLight intensity={0.8} />
-
+      <Text fontSize={0.1}></Text>
       {/* Apply MeshTransmissionMaterial */}
       {/* Traverse the children and assign the material */}
       {computer.scene.children.map((child, index) => (
@@ -88,7 +91,7 @@ const ComputersCanvas = () => {
       frameloop="demand"
       shadows
       dpr={[1, 2]}
-      camera={{ position: [15, 0, 0], fov: 1.5 }}
+      camera={{ position: [12, 0, 0], fov: 1.4 }}
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>

@@ -27,9 +27,22 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed z-20 top-2 rounded-[20px]`}
+      className={`${styles.paddingX} w-full fixed z-20 py-5`}
+      style={{
+        backgroundColor: "var(--body-bg-color)", // Fill with black
+        border: "2px solid grey", // Grey outline
+        display: "grid",
+        gridTemplateColumns: "15% 70% 15%",
+        alignItems: "center",
+        top: "0", // Ensures navbar is at the very top
+        margin: "0", // Removes any unintended margin
+      }}
     >
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
+      {/* Left Column: Logo */}
+      <div
+        className="flex justify-center items-center h-full"
+        style={{ textAlign: "center" }}
+      >
         <Link
           to="/"
           className="flex items-center gap-2"
@@ -38,13 +51,15 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <p className="text-white text-[18px] font-bold cursor-pointer flex ">
-            Roma &nbsp;
-            <span className="sm:block hidden"> | Portfolio Website</span>
+          <p className="text-white text-[18px] font-bold cursor-pointer flex">
+            Roma Portfolio Website
           </p>
         </Link>
+      </div>
 
-        <ul className="list-none hidden sm:flex flex-row gap-10">
+      {/* Center Column: Navigation Links */}
+      <div className="hidden sm:flex justify-center">
+        <ul className="list-none flex flex-row gap-10">
           {navLinks.map((nav) => (
             <li
               key={nav.id}
@@ -57,37 +72,38 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+      </div>
 
-        <div className="sm:hidden flex flex-1 justify-end items-center">
-          <img
-            src={toggle ? close : menu}
-            alt="menu"
-            className="w-[28px] h-[28px] object-contain"
-            onClick={() => setToggle(!toggle)}
-          />
+      {/* Right Column: Toggle Menu */}
+      <div className="flex justify-end items-center">
+        <img
+          src={toggle ? close : menu}
+          alt="menu"
+          className="sm:hidden w-[28px] h-[28px] object-contain"
+          onClick={() => setToggle(!toggle)}
+        />
 
-          <div
-            className={`${
-              !toggle ? "hidden" : "flex"
-            } p-6 bg-neutral-900 absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
-          >
-            <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
-              {navLinks.map((nav) => (
-                <li
-                  key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-white" : "text-secondary"
-                  }`}
-                  onClick={() => {
-                    setToggle(!toggle);
-                    setActive(nav.title);
-                  }}
-                >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div
+          className={`${
+            !toggle ? "hidden" : "flex"
+          } p-6 bg-neutral-900 absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+        >
+          <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
+            {navLinks.map((nav) => (
+              <li
+                key={nav.id}
+                className={`font-poppins font-medium cursor-pointer text-[16px] ${
+                  active === nav.title ? "text-white" : "text-secondary"
+                }`}
+                onClick={() => {
+                  setToggle(!toggle);
+                  setActive(nav.title);
+                }}
+              >
+                <a href={`#${nav.id}`}>{nav.title}</a>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </nav>

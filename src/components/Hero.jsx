@@ -1,49 +1,60 @@
-import { motion } from "framer-motion";
-
-import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
   return (
-    <section className={`relative w-full h-screen mx-auto`}>
-      <ComputersCanvas />
+    <section
+      className="relative w-full h-screen grid"
+      style={{
+        gridTemplateRows: "15% 70% 15%", // Top: 20%, Middle: 60%, Bottom: 20%
+        gridTemplateColumns: "15% 70% 15%", // Left: 20%, Center: 60%, Right: 20%
+        outline: "2px solid red", // Section boundary for debugging
+      }}
+    >
+      {/* Top-left block */}
+      <div style={{ outline: "2px solid violet" }}></div>
 
+      {/* Top-center block */}
+      <div style={{ outline: "2px solid violet" }}></div>
+
+      {/* Top-right block */}
+      <div style={{ outline: "2px solid violet" }}></div>
+
+      {/* Middle-left block */}
+      <div style={{ outline: "2px solid violet" }}></div>
+
+      {/* Center block with ComputersCanvas */}
       <div
-        className={`pointer-events-none absolute inset-0 top-[100px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+        style={{
+          outline: "2px solid blue", // Center block boundary
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          gridColumn: "2", // Middle column
+          gridRow: "2", // Middle row
+        }}
       >
-        <div className="flex flex-col justify-center items-center mt-5">
-          <div className="w-5 h-5 rounded-full bg-[red]" />
-          <div className="w-1 sm:h-80 h-40 red-gradient" />
-        </div>
-
-        <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi, my name is <span className="text-[White]">Roman</span>
-          </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I develop 3D visuals, user <br className="sm:block hidden" />
-            interfaces and web applications
-          </p>
+        <div
+          style={{
+            width: "100%", // Adjust size to make it larger
+            height: "100%",
+            outline: "2px solid green", // For ComputersCanvas boundary
+          }}
+        >
+          <ComputersCanvas />
         </div>
       </div>
 
-      <div className="absolute xs:bottom-10 bottom-20 w-full flex justify-center items-center">
-        <a href="#about">
-          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
-            <motion.div
-              animate={{
-                y: [0, 24, 0],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: "loop",
-              }}
-              className="w-3 h-3 rounded-full bg-secondary mb-1"
-            />
-          </div>
-        </a>
-      </div>
+      {/* Middle-right block */}
+      <div style={{ outline: "2px solid violet" }}></div>
+
+      {/* Bottom-left block */}
+      <div style={{ outline: "2px solid violet" }}></div>
+
+      {/* Bottom-center block */}
+      <div style={{ outline: "2px solid violet" }}></div>
+
+      {/* Bottom-right block */}
+      <div style={{ outline: "2px solid violet" }}></div>
     </section>
   );
 };
