@@ -22,6 +22,7 @@ const Navbar = () => {
     <nav
       className="w-screen h-16 fixed z-20"
       style={{
+        height: "15vh", // Adjust navbar height to 15% of viewport height
         display: "grid", // Always use a grid
         gridTemplateColumns: "15% 70% 15%", // Define grid structure
         gridTemplateRows: "1fr", // Single row
