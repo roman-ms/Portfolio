@@ -1,110 +1,104 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
+import { logo, menu } from "../assets";
 
 const Navbar = () => {
-  const [active, setActive] = useState("");
-  const [toggle, setToggle] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      if (scrollTop > 100) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleResize);
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
     <nav
-      className={`${styles.paddingX} w-full fixed z-20 py-5`}
+      className="w-screen h-16 fixed z-20"
       style={{
-        backgroundColor: "var(--body-bg-color)", // Fill with black
-        border: "2px solid grey", // Grey outline
-        display: "grid",
-        gridTemplateColumns: "15% 70% 15%",
-        alignItems: "center",
-        top: "0", // Ensures navbar is at the very top
-        margin: "0", // Removes any unintended margin
+        display: "grid", // Always use a grid
+        gridTemplateColumns: "15% 70% 15%", // Define grid structure
+        gridTemplateRows: "1fr", // Single row
+        alignItems: "center", // Vertically align items
+        backgroundColor: "var(--body-bg-color)", // Match body background color
+        borderBottom: "2px solid grey", // Optional border
+        top: "0", // Stick navbar to the top
+        outline: "2px solid red", // Debugging: Highlight navbar boundary
       }}
     >
-      {/* Left Column: Logo */}
+      {/* Left Column */}
       <div
-        className="flex justify-center items-center h-full"
-        style={{ textAlign: "center" }}
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100%",
+          height: "100%",
+          outline: "2px solid violet", // Debugging left column
+        }}
       >
         <Link
           to="/"
           className="flex items-center gap-2"
           onClick={() => {
-            setActive("");
             window.scrollTo(0, 0);
           }}
         >
-          <p className="text-white text-[18px] font-bold cursor-pointer flex">
-            Roma Portfolio Website
+          <p className="text-white text-[18px] font-bold cursor-pointer">
+            Logo
           </p>
         </Link>
       </div>
 
-      {/* Center Column: Navigation Links */}
-      <div className="hidden sm:flex justify-center">
-        <ul className="list-none flex flex-row gap-10">
-          {navLinks.map((nav) => (
-            <li
-              key={nav.id}
-              className={`${
-                active === nav.title ? "text-red-600" : "text-white"
-              } hover:text-red-600 text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
-            >
-              <a href={`#${nav.id}`}>{nav.title}</a>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      {/* Right Column: Toggle Menu */}
-      <div className="flex justify-end items-center">
-        <img
-          src={toggle ? close : menu}
-          alt="menu"
-          className="sm:hidden w-[28px] h-[28px] object-contain"
-          onClick={() => setToggle(!toggle)}
-        />
-
-        <div
-          className={`${
-            !toggle ? "hidden" : "flex"
-          } p-6 bg-neutral-900 absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
-        >
-          <ul className="list-none flex justify-end items-start flex-1 flex-col gap-4">
+      {/* Center Column */}
+      <div
+        style={{
+          display: "flex", // Always keep the grid intact
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100%",
+          height: "100%",
+          outline: "2px solid blue", // Debugging center column
+        }}
+      >
+        {!isMobile ? (
+          <ul className="list-none flex flex-row gap-10">
             {navLinks.map((nav) => (
               <li
                 key={nav.id}
-                className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                  active === nav.title ? "text-white" : "text-secondary"
-                }`}
-                onClick={() => {
-                  setToggle(!toggle);
-                  setActive(nav.title);
-                }}
+                className="text-white hover:text-red-600 text-[18px] font-medium cursor-pointer"
               >
                 <a href={`#${nav.id}`}>{nav.title}</a>
               </li>
             ))}
           </ul>
-        </div>
+        ) : null}
+      </div>
+
+      {/* Right Column */}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center", // Center burger menu horizontally
+          alignItems: "center", // Center burger menu vertically
+          width: "100%",
+          height: "100%",
+          outline: "2px solid green", // Debugging right column
+        }}
+      >
+        {isMobile ? (
+          <img
+            src={menu}
+            alt="menu"
+            className="w-[28px] h-[28px] object-contain cursor-pointer"
+          />
+        ) : null}
       </div>
     </nav>
   );
