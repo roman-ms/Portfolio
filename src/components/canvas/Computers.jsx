@@ -80,18 +80,16 @@ const Computers = ({ isMobile }) => {
   );
 };
 
-/*
 const StaticText = () => (
   <Text
-    fontSize={1}
+    fontSize={0.5}
     position={[0, 0, 0]} // Position the text independently
-    rotation={[0, 0, 0]} // Ensure no rotation is applied
+    rotation={[0, -Math.PI / 2, 0]} // Ensure no rotation is applied
     color="white"
   >
-    O
-</Text>
+    I I
+  </Text>
 );
-*/
 
 const ComputersCanvas = () => {
   const isMobile = useIsMobile();
@@ -102,7 +100,7 @@ const ComputersCanvas = () => {
       frameloop="demand"
       shadows
       dpr={[1, 2]}
-      camera={{ position: [1, 5, 0], fov: 4 }}
+      camera={{ position: [6, 0, 0], fov: 3 }}
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
